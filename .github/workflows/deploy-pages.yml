@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Show toolchain versions
+        run: node --version && npm --version && npx tsc --version
+
       - name: Typecheck
         run: npm run typecheck
 
