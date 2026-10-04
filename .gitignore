@@ -5,6 +5,7 @@ node_modules/
 
 # Build output
 dist/
+build/
 dist-ssr/
 *.local
 
@@ -37,7 +38,7 @@ Thumbs.db
 *.sqlite
 *.sqlite-journal
 *.db
-data/
+/data/
 
 # Coverage / caches
 coverage/

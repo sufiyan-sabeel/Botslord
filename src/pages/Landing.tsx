@@ -1,6 +1,6 @@
 import { ArrowRight, Bot, FileText, FolderKanban, Github, Lock, Scale, ShieldCheck, Sparkles } from 'lucide-react';
 import { SITE } from '../lib/config';
-import { navigate } from '../lib/router';
+import { appHref, navigate } from '../lib/router';
 
 const FEATURES = [
   { icon: Bot, title: 'Specialist Bots', body: 'Research, coding, writing and planning coworkers with explicit roles and instructions.' },
@@ -50,7 +50,7 @@ export function LandingPage() {
         <div className="section-head">
           <h2 id="features-title">Everything you need for supervised coworkers</h2>
           <a
-            href="/bots"
+            href={appHref('/bots')}
             onClick={(e) => {
               e.preventDefault();
               navigate('/bots');

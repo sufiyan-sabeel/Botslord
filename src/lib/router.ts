@@ -28,6 +28,14 @@ export function navigate(to: string): void {
   window.scrollTo({ top: 0, behavior: 'auto' });
 }
 
+/** Base-aware href for anchor `href` attributes (respects Pages `/Botslord/` base). */
+export function appHref(to: string): string {
+  const base = basePath();
+  const clean = to.startsWith('/') ? to : '/' + to;
+  const url = (base + clean).replace(/\/{2,}/g, '/');
+  return url || '/';
+}
+
 /** Minimal client-side router state (no dependency, Pages-safe). */
 export function useRoute(): string {
   const [route, setRoute] = useState<string>(() => currentRoute());

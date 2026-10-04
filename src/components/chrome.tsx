@@ -13,7 +13,7 @@ import {
   X,
 } from 'lucide-react';
 import { SITE } from '../lib/config';
-import { navigate, useLinkProps, useRoute } from '../lib/router';
+import { appHref, navigate, useLinkProps, useRoute } from '../lib/router';
 
 const NAV = [
   { to: '/', label: 'Home', icon: Home, exact: true },
@@ -138,16 +138,16 @@ export function Footer() {
         </div>
         <nav aria-label="Product">
           <strong>Product</strong>
-          <a href="/dashboard" onClick={go('/dashboard')}>
+          <a href={appHref('/dashboard')} onClick={go('/dashboard')}>
             Dashboard
           </a>
-          <a href="/bots" onClick={go('/bots')}>
+          <a href={appHref('/bots')} onClick={go('/bots')}>
             Bot directory
           </a>
-          <a href="/spaces" onClick={go('/spaces')}>
+          <a href={appHref('/spaces')} onClick={go('/spaces')}>
             Spaces
           </a>
-          <a href="/security" onClick={go('/security')}>
+          <a href={appHref('/security')} onClick={go('/security')}>
             Security
           </a>
         </nav>
@@ -156,10 +156,10 @@ export function Footer() {
           <a href={SITE.githubUrl} target="_blank" rel="noreferrer">
             View on GitHub
           </a>
-          <a href="/about" onClick={go('/about')}>
+          <a href={appHref('/about')} onClick={go('/about')}>
             About / Open Source
           </a>
-          <a href="/settings" onClick={go('/settings')}>
+          <a href={appHref('/settings')} onClick={go('/settings')}>
             Settings
           </a>
         </nav>

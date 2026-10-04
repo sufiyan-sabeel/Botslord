@@ -1,6 +1,6 @@
 import { Footer, Topbar } from './components/chrome';
 import { DemoBanner } from './components/ui';
-import { matchRoute, navigate, useRoute } from './lib/router';
+import { matchRoute, navigate, useRoute, appHref } from './lib/router';
 import { AboutPage } from './pages/About';
 import { ActivityPage } from './pages/Activity';
 import { BotDetailPage } from './pages/BotDetail';
@@ -39,7 +39,7 @@ function SideNav({ current }: { current: string }) {
         return (
           <a
             key={i.to}
-            href={i.to}
+            href={appHref(i.to)}
             aria-current={active ? 'page' : undefined}
             onClick={(e) => {
               e.preventDefault();
