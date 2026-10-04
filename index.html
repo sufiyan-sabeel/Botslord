@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#121417" />
+    <meta
+      name="description"
+      content="Freebots — Open AI coworkers. Your tools. Your control. Create specialized AI coworkers for research, writing, coding and planning."
+    />
+    <title>Freebots — Open AI coworkers. Your tools. Your control.</title>
+    <!-- SPA fallback for GitHub Pages: restores deep links redirected via 404.html -->
+    <script>
+      (function () {
+        try {
+          var q = new URLSearchParams(window.location.search);
+          var redirect = q.get('redirect');
+          if (redirect) {
+            var base = '/Botslord/';
+            var target = base + redirect.replace(/^\//, '');
+            window.history.replaceState(null, '', target + window.location.hash);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

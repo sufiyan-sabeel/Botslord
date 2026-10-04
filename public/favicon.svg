@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Freebots logo">
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#16191e"/>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#g)" opacity="0.55"/>
+  <path d="M20 42V22h12.5a8.5 8.5 0 0 1 0 17H24v3h-4zm4-7h8.3a4.5 4.5 0 0 0 0-9H24v9z" fill="#e8edf3"/>
+  <circle cx="44" cy="40" r="5" fill="#38bdf8"/>
+  <circle cx="44" cy="40" r="2.2" fill="#0b1220"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+</svg>
